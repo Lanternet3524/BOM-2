@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>사이트 접속</title>
+<script>
+    function global() {
+        let select = document.getElementById("site");
+        window.open(select.options[select.selectedIndex].value); // 사용자가 선택한 옵션(<option>) 인덱스
+    }
+    </script>
+</head>
+<body>
+<h3>옵션 선택으로 사이트 접속</h3>
+<p>옵션 선택 마다 새 윈도우에 접속합니다.</p>
+<hr>
+<p>접속할 사이트</p>
+<select id="site" onchange = "global()">
+    <option value="http://www.naver.com" >네이버
+    <option value="http://www.google.com">구글
+    <option value = "https://www.oracle.com">오라클
+</select>
+<p>
+</body>
+</html>
